@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+ 
+  <title>UI Login</title>
+</head>
+<body>
+   <div class="container">
+     <div class="login-container">
+       <div class="register">
+         <h2>Registrarse</h2>
+         <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+            <input type="text" placeholder="tipo_documento" class="tipo_documento" name="tipo_documento" [(ngModel)]="usuario.tipo_documento" required>
+            <input type="number" placeholder="num_documento" class="num_documento" name="num_documento" [(ngModel)]="usuario.id_usuario" required>
+            <input type="text" placeholder="Nombres" class="nombre" name="nombre" [(ngModel)]="usuario.nombre" required>
+            <input type="text" placeholder="Apellidos" class="apellido" name="apellido" [(ngModel)]="usuario.apellido" required>
+            <input type="text" placeholder="Ciudad" class="Ciudad" name="ciudad" [(ngModel)]="usuario.ciudad" required>
+            <input type="email" placeholder="Email" class="Email" name="email" [(ngModel)]="usuario.email" required>
+            <input type="password" placeholder="Contrasena" class="Contrasena" name="contrasena" [(ngModel)]="usuario.contrasena" required>
+            <input type="submit" id="btninicio" [disabled]="!usuarioForm.form.valid" value="REGISTRARSE" />
+
+         </form>
+       </div>
+    </div>
+   </div>
+</body>
+</html>
