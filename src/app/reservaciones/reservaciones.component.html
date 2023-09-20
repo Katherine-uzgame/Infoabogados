@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservaciones</title>
+  <link rel="stylesheet" href="STYLE RESERVACIONES.css">
+</head>
+<body>
+  <div class="container">
+    <h2>SOLICITUD DE CITAS</h2>
+    <form action="procesar_reserva.php" method="POST">
+      <label for="nombre_usuario">Nombre usuario:</label>
+      <input type="text" id="nombre_usuario" name="nombre_usuario" [(ngModel)]="usuario.nombre" required>
+
+      <label for="Describa_caso">Describa su caso:</label>
+      <textarea id="Describa_caso" name="Describa_caso" rows="" [(ngModel)]="usuario.Describa_caso" required></textarea>
+
+      <label for="fecha">Fecha de la cita:</label>
+      <input type="date" id="fecha" name="fecha" [(ngModel)]="usuario.fecha" required>
+
+      <label for="hora">Hora de la cita:</label>
+      <input type="time" id="hora" name="hora" [(ngModel)]="usuario.hora" required>
+      
+
+      <label for="Profesional">Profesional:</label>
+      <select id="Profesional" name="Profesional" [(ngModel)]="usuario.Profesional" required>
+        <option value="" disabled selected>Selecciona un Profesional</option>
+        <option value="civil">civil</option>
+        <option value="administrativo">administrativo</option>
+        <option value="comercial">comercial</option>
+        <option value="laboral">laboral</option>
+        <option value="penal">penal</option>
+        <option value="familiar">familiar</option>
+    
+      </select>
+
+      <input type="submit" value="Reservar cita">
+    </form>
+  </div>
+</body>
+</html>

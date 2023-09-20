@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="inicio.component.css">
+ 
+  <title>UI Login</title>
+</head>
+<body>
+  <div class="container">
+    <div class="login-container">
+        <div class="login" style="inline-size: max-content">
+          <h2>Iniciar Sesión</h2>
+            <div class="login-items" >
+                <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+                    <input type="text" placeholder="Email" class="Email" name="email" [(ngModel)]="usuario.email" required>
+                        <input type="password" placeholder="Contraseña" class="pass" name="pass" [(ngModel)]="usuario.contrasena" required>
+                        <a href="/src/app/reservaciones/reservaciones.component.html" type="button" id="btninicio1" [routerLink]="['../reservaciones']" value="INICIAR" >
+                        <input type="button" id="btninicio1" [routerLink]="['../registro']" value="REGISTRARSE" >                        
+                </form>
+            </div>
+         </div> 
+     </div>
+  </div> 
+</body>
+</html>
